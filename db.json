@@ -1,0 +1,98 @@
+{
+  "doubts": [
+    {
+      "id": "1",
+      "title": "Diferença entre S3 bucket policy e IAM policy",
+      "description": "Não entendi quando usar bucket policy vs IAM policy para controlar acesso ao S3. Ambos controlam permissões, mas qual usar em cada caso?",
+      "subject": "AWS Cloud",
+      "status": "pending",
+      "priority": "high",
+      "source": "AWS Documentation - S3 Security",
+      "createdAt": "2025-03-20T10:30:00.000Z",
+      "resolvedAt": null,
+      "resolution": null
+    },
+    {
+      "id": "2",
+      "title": "Como funciona o array de dependências no useEffect?",
+      "description": "Qual a diferença entre useEffect com array vazio [], com dependências [count], e sem array nenhum? Quando cada um executa?",
+      "subject": "React",
+      "status": "resolved",
+      "priority": "medium",
+      "source": "Videoaula - React Hooks Essenciais",
+      "createdAt": "2025-03-18T14:20:00.000Z",
+      "resolvedAt": "2025-03-19T09:15:00.000Z",
+      "resolution": "Array vazio executa 1x na montagem. Com dependências executa quando elas mudam. Sem array executa a cada render (evitar!)."
+    },
+    {
+      "id": "3",
+      "title": "VPC Peering vs Transit Gateway - quando usar?",
+      "description": "Preciso conectar 5 VPCs. Vi que posso usar VPC Peering ou Transit Gateway. Qual a diferença e quando usar cada um?",
+      "subject": "AWS Cloud",
+      "status": "asked",
+      "priority": "high",
+      "source": "Projeto Prático - Arquitetura Multi-VPC",
+      "createdAt": "2025-03-21T16:45:00.000Z",
+      "resolvedAt": null,
+      "resolution": null
+    },
+    {
+      "id": "4",
+      "title": "TypeScript: quando usar type vs interface?",
+      "description": "Vejo códigos usando 'type' e outros usando 'interface'. Qual a diferença prática? Tem casos onde um é melhor que o outro?",
+      "subject": "TypeScript",
+      "status": "asked",
+      "priority": "low",
+      "source": "TypeScript Docs - Types vs Interfaces",
+      "createdAt": "2025-03-22T08:10:00.000Z",
+      "resolvedAt": null,
+      "resolution": null
+    },
+    {
+      "id": "5",
+      "title": "React Router: loader vs useEffect para fetch",
+      "description": "React Router v6.4+ tem loaders. Devo usar loader ou continuar fazendo fetch no useEffect? Qual a vantagem?",
+      "subject": "React",
+      "status": "pending",
+      "priority": "medium",
+      "source": "Artigo - React Router v6.4 Features",
+      "createdAt": "2025-03-23T11:30:00.000Z",
+      "resolvedAt": null,
+      "resolution": null
+    },
+    {
+      "id": "6",
+      "title": "Lambda concorrência vs provisionamento",
+      "description": "Minha Lambda está tendo cold start. Devo usar provisionamento de concorrência? Quando vale a pena o custo extra?",
+      "subject": "AWS Cloud",
+      "status": "resolved",
+      "priority": "high",
+      "source": "AWS re:Invent Video - Lambda Best Practices",
+      "createdAt": "2025-03-19T13:00:00.000Z",
+      "resolvedAt": "2025-03-20T10:30:00.000Z",
+      "resolution": "Provisionar concorrência só vale se: 1) Latência crítica, 2) Tráfego previsível, 3) Custo se paga com SLA. Do contrário, otimizar tamanho da função."
+    }
+  ],
+  "subjects": [
+    {
+      "id": "1",
+      "name": "AWS Cloud",
+      "color": "#FF9900"
+    },
+    {
+      "id": "2",
+      "name": "React",
+      "color": "#61DAFB"
+    },
+    {
+      "id": "3",
+      "name": "TypeScript",
+      "color": "#3178C6"
+    },
+    {
+      "id": "4",
+      "name": "Node.js",
+      "color": "#339933"
+    }
+  ]
+}
