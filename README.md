@@ -1,53 +1,75 @@
-# React + TypeScript + Vite
+# DevDoubt Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição do Problema Resolvido
 
-Currently, two official plugins are available:
+O DevDoubt Tracker é uma aplicação web para organizar e rastrear dúvidas de estudo. Permite aos usuários criar, gerenciar e filtrar dúvidas por matéria, status e prioridade, facilitando o acompanhamento do progresso nos estudos e a resolução de questões pendentes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias Usadas
 
-## React Compiler
+- **Frontend**: React 19 com TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Backend Simulado**: JSON Server
+- **Linting**: ESLint com TypeScript
+- **Outros**: PostCSS, Autoprefixer
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Instruções para Rodar
 
-## Expanding the ESLint configuration
+### Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Instalação
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repositorio>
+   cd organizador-estudos
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Execução
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
+1. Inicie o servidor JSON (backend simulado):
+   ```bash
+   npm run server
+   ```
+   O servidor estará rodando em `http://localhost:3001`.
+
+2. Em outro terminal, inicie o frontend:
+   ```bash
+   npm run dev
+   ```
+   A aplicação estará disponível em `http://localhost:5173`.
+
+### Build para Produção
+
+1. **Publicar (ou iniciar)** sua API (JSON Server ou serviço real) antes de servir o frontend. Isso garante que o frontend tenha acesso à API e evite erros de conexão.
+
+   - Para JSON Server local:
+     ```bash
+     npm run server
+     ```
+   - Para API em nuvem (Heroku, Vercel, etc): confirme que o endpoint está ativo.
+
+2. Em seguida, rode o build e preview do frontend:
+   ```bash
+   npm run build
+   npm run preview
+   ```
+
+### Scripts Disponíveis
+
+- `npm run dev`: Inicia o servidor de desenvolvimento
+- `npm run server`: Inicia o JSON Server
+- `npm run build`: Compila o projeto para produção
+- `npm run lint`: Executa o linter
+- `npm run preview`: Visualiza o build de produção
 import reactDom from 'eslint-plugin-react-dom'
 
 export default defineConfig([
