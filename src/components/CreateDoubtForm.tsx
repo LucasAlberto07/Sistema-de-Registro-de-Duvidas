@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import type { CreateDoubtData, Subject, DoubtPriority } from '../types';
 
 interface CreateDoubtFormProps {
@@ -56,7 +56,6 @@ export function CreateDoubtForm({ subjects, onSubmit, onCancel }: CreateDoubtFor
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Nova Dúvida</h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Título */}
             <div>
               <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1">
                 Título da dúvida *
@@ -72,7 +71,6 @@ export function CreateDoubtForm({ subjects, onSubmit, onCancel }: CreateDoubtFor
               />
             </div>
 
-            {/* Descrição */}
             <div>
               <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
                 Descrição detalhada *
@@ -88,7 +86,6 @@ export function CreateDoubtForm({ subjects, onSubmit, onCancel }: CreateDoubtFor
               />
             </div>
 
-            {/* Matéria */}
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                 Matéria *
@@ -108,7 +105,6 @@ export function CreateDoubtForm({ subjects, onSubmit, onCancel }: CreateDoubtFor
               </select>
             </div>
 
-            {/* Prioridade */}
             <div>
               <label htmlFor="priority" className="block text-sm font-medium text-gray-700 mb-1">
                 Prioridade *
@@ -126,7 +122,6 @@ export function CreateDoubtForm({ subjects, onSubmit, onCancel }: CreateDoubtFor
               </select>
             </div>
 
-            {/* Fonte */}
             <div>
               <label htmlFor="source" className="block text-sm font-medium text-gray-700 mb-1">
                 De onde veio a dúvida? *
@@ -142,7 +137,6 @@ export function CreateDoubtForm({ subjects, onSubmit, onCancel }: CreateDoubtFor
               />
             </div>
 
-            {/* Botões */}
             <div className="flex gap-3 pt-4">
               <button
                 type="submit"
