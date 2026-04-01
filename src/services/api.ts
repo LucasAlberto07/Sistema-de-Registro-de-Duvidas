@@ -1,6 +1,7 @@
 import type { Doubt, Subject, CreateDoubtData, UpdateDoubtData, CreateSubjectData } from '../types';
 
-const API_URL = 'http://localhost:3001';
+// Usa variável do Vercel (produção) ou localhost (desenvolvimento)
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 // ==================== DOUBTS ====================
 
